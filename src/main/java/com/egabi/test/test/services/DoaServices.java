@@ -3,14 +3,16 @@ package com.egabi.test.test.services;
 import com.egabi.test.test.entities.Emps;
 import com.egabi.test.test.repo.EmpRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@Service(value = "/api")
+@Service
+@Component
 public class DoaServices {
 
     @Autowired
-    private EmpRepo empRepo;
+    EmpRepo empRepo;
 
     @RequestMapping(value = "/insert")
     public  void insertIntoTable() {

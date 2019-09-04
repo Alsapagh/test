@@ -3,6 +3,7 @@ package com.egabi.test.test;
 import com.egabi.test.test.services.DoaServices;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.stereotype.Component;
 
 @SpringBootApplication
 public class TestApplication {
