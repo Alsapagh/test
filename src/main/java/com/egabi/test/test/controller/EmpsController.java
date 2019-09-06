@@ -4,6 +4,7 @@ import com.egabi.test.test.repo.EmpRepo;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class EmpsController {
@@ -13,7 +14,7 @@ public class EmpsController {
         this.empRepo = empRepo;
     }
 
-    @RequestMapping(value = "/emps")
+    @RequestMapping(value = "/emps",method = RequestMethod.GET)
     private String getEmps(Model model) {
         model.addAttribute("emps", empRepo.findAll());
         return "emps";
