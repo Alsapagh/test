@@ -2,14 +2,15 @@ package com.egabi.test.test.entities;
 
 import javax.persistence.*;
 
-@Entity(name = "Employees")
+@Entity
 public class Emps {
     @Column(name = "ID")
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    Integer id;
+    private Integer id;
+
     @Column(name = "Name")
-    String name;
+    private String name;
 
     public Integer getId() {
         return id;

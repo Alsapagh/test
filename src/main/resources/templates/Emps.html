@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring Framework Ayman</title>
+</head>
+<body>
+<h1>Emp List</h1>
+<table>
+    <tr>
+        <td>ID</td>
+        <td>Name</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <br/>
+    </tr>
+    <tr th:each="emp : ${emps}">
+        <td th:text="${emp.id}">123</td>
+        <td th:text="${emp.title}">Title</td>
+    </tr>
+</table>
+</body>
+</html>
